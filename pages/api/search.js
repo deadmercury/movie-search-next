@@ -3,7 +3,7 @@ const errorThrower = (message) => new Error(message);
 export default async function search(req, res) {
   try {
     let { name, year, page } = req.query;
-    if (!name) throw errorThrower(`$name not specified`);
+    if (!name) throw errorThrower(`name not specified`);
     if (!page) page = 1;
     const query = new URL(`/3/search/movie`, `https://api.themoviedb.org`);
     query.searchParams.append('api_key', process.env.KEY);

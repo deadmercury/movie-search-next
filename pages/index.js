@@ -3,38 +3,17 @@ import { useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import ThemeToggler from '../component/ThemeToggler';
 import styles from '../styles/index.module.css';
-import Page from '../component/Page';
+import Results from '../component/Results';
 
 export default function Search() {
   const [theme] = useTheme();
   const [movieName, setMovieName] = useState('');
   const [movieYear, setMovieYear] = useState('');
-  const [pages, setPages] = useState([]);
-  const [totalPages, setTotalPages] = useState(0);
-
-  const loadMovies = () => {
-    setPages(
-      pages.concat(
-        <Page
-          index={pages.length + 1}
-          key={pages.length + 1}
-          query={[movieName, movieYear]}
-        />
-      )
-    );
-  };
+  const [results, setResults] = useState(false);
 
   const handleFormSubmission = (e) => {
     e.preventDefault();
-    setTotalPages(0);
-    setPages([
-      <Page
-        index={1}
-        key="1"
-        query={[movieName, movieYear]}
-        setTotalPages={setTotalPages}
-      />,
-    ]);
+    setResults(<Results name={movieName} year={movieYear} />);
   };
 
   return (
@@ -76,15 +55,7 @@ export default function Search() {
             <input type="submit" value="Search" />
           </div>
         </form>
-        <div className={styles.results}>{pages}</div>
-        {totalPages > pages.length && (
-          <button
-            className={`${styles[theme]} ${styles.load}`}
-            onClick={loadMovies}
-          >
-            Load More
-          </button>
-        )}
+        <div className={styles.results}>{results}</div>
       </main>
     </>
   );

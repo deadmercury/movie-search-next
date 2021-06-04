@@ -1,34 +1,21 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Search Movies
 
-## Getting Started
+NextJS app to search movies using [TMDB](https://www.themoviedb.org/) API.
 
-First, run the development server:
+## Environment Variables
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- `KEY` [TMDB API](https://www.themoviedb.org/documentation/api) key.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## References
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- Design on [Figma](https://www.figma.com/file/bFTvg7Yjl5fRaeCsAYEqgI/Movie-Search?node-id=0%3A1).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Icons from [boxicons](https://github.com/atisawd/boxicons).
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- [Kleki](https://kleki.com/).
 
-## Learn More
+- How to use react context effectively by [Kent C Dodds](https://kentcdodds.com/blog/how-to-use-react-context-effectively).
 
-To learn more about Next.js, take a look at the following resources:
+- Fetcher gets called much more than I expect in [SWR Issues](https://github.com/vercel/swr/issues/167#issuecomment-560478786).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Cannot update a component (App) while rendering a different component on [Stack Overflow](https://stackoverflow.com/questions/62236000/cannot-update-a-component-app-while-rendering-a-different-component).
