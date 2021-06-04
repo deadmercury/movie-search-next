@@ -1,0 +1,14 @@
+.container {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  grid-column: 1 / -1;
+}
+
+.light.container {
+  color: maroon;
+}
+
+.dark.container {
+  color: lightgrey;
+}

@@ -1,16 +1,38 @@
-html,
-body {
+@import url('../public/fonts/Inter/Inter.css');
+@import url('../public/fonts/Montserrat/Montserrat.css');
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  will-change: color, background-color;
+  transition: color 750ms, background-color 750ms;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
+:root {
+  /* light mode */
+  --lm-bg-clr: #87aca3;
+  --lm-card-bg-clr: rgba(63, 94, 90, 0.35);
+  --lm-title: #25171a;
+  --lm-lbl: #4b244a;
+  --lm-btn-bg: #182825;
+  --lm-btn-clr: #eac9c1;
+  --lm-movie-name: #022b3a;
+  --lm-movie-attr: rgba(0, 0, 0, 0.8);
+  --lm-movie-desc: #2c1320;
+  /* dark mode*/
+  --dm-bg-clr: #211522;
+  --dm-card-bg-clr: #252525;
+  --dm-title: #c197d2;
+  --dm-lbl: #d3d4d9;
+  --dm-btn-bg: #8c4aa5;
+  --dm-btn-clr: #ffffff;
+  --dm-movie-name: #8acdea;
+  --dm-movie-attr: #ede6f2;
+  --dm-movie-desc: #ffffff;
+  /* common button focus style */
+  --button-background-focus: #ffffff;
+  --button-color-focus: #000000;
 }
