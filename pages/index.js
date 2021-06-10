@@ -1,15 +1,24 @@
 import Head from 'next/head';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTheme } from '../context/ThemeContext';
 import ThemeToggler from '../component/ThemeToggler';
 import styles from '../styles/index.module.css';
 import Results from '../component/Results';
 
 export default function Search() {
-  const [theme] = useTheme();
+  const [theme, setTheme] = useTheme();
   const [movieName, setMovieName] = useState('');
   const [movieYear, setMovieYear] = useState('');
   const [results, setResults] = useState(false);
+
+  useEffect(() => {
+    window.matchMedia(`(prefers-color-scheme: dark)`).onchange = (e) => {
+      setTheme(e.matches ? 'dark' : 'light');
+    };
+    if (window.matchMedia(`(prefers-color-scheme: light)`).matches) {
+      setTheme('light');
+    }
+  }, []);
 
   const handleFormSubmission = (e) => {
     e.preventDefault();
