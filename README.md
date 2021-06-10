@@ -1,6 +1,6 @@
 # Search Movies
 
-NextJS app to search movies using [TMDB](https://www.themoviedb.org/) API.
+NextJS app to search movies using [TMDB](https://www.themoviedb.org/) API. Deployed on Vercel [here](https://movie-search-next.vercel.app/).
 
 ## Environment Variables
 
