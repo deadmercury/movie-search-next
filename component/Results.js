@@ -1,4 +1,4 @@
-import { useSWRInfinite } from 'swr';
+import useSWRInfinite from 'swr/infinite';
 import Status from '../component/Status';
 import { genres, posterURL } from '../utils/tmdbwrapper';
 import MovieCard from '../component/MovieCard';
