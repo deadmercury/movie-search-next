@@ -21,14 +21,15 @@ export default function MovieCard({ id, name, year, genre, poster, desc }) {
           </h1>
           <div className={`${styles[theme]} ${styles.year}`}>{`(${year})`}</div>
           <div className={`${styles[theme]} ${styles.genre}`}>{genre}</div>
-          <Image
-            src={poster.split(' ')[2]}
-            src={poster}
-            width={154}
-            height={231}
-            alt={`${name} Poster`}
-            title={`${name} Poster`}
-          />
+          <div>
+            <Image
+              src={poster}
+              width={154}
+              height={231}
+              alt={`${name} Poster`}
+              title={`${name} Poster`}
+            />
+          </div>
           <p className={`${styles[theme]} ${styles.desc}`}>{desc}</p>
         </article>
       </a>
