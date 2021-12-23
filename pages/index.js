@@ -64,7 +64,7 @@ export default function Search() {
             <input type="submit" value="Search" />
           </div>
         </form>
-        <div className={styles.results}>{results}</div>
+        <ul className={styles.results}>{results}</ul>
       </main>
     </>
   );
