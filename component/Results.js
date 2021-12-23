@@ -49,6 +49,7 @@ export default function Results({ name, year }) {
     .map((page) =>
       page.results.map((d) => {
         return {
+          id: d.id,
           name: d.title,
           year: d.release_date ? d.release_date.split('-')[0] : 'Unknown',
           genre: d.genre_ids.map((id) => genres[id]).join(', '),
